@@ -4,14 +4,12 @@ import guru.springframework.examplebeans.FakeDataSource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 @Configuration
-@PropertySource("classpath:datasource.properties") //brings in datasource properties
 public class PropertyConfig {
 
-    @Value("${clark.username}") //spring expression language gets the properties out of the datasource.properties file
+    @Value("${clark.username}") //spring expression language gets the properties out of the application.properties file
     String user;
     @Value("$(clark.password}")
     String password;
