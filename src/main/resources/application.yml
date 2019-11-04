@@ -1,0 +1,12 @@
+clark:
+  jms:
+    username: matthew
+    password: 123clark
+    url: test
+
+---
+spring:
+  profiles: de
+clark:
+  jms:
+    username: german username
